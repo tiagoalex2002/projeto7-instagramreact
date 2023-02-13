@@ -1,4 +1,4 @@
-import ConteudosPost from "./ConteudosPost";
+
 import ConteudosSugestoes from "./ConteudosSugestoes";
 import Sugestao from "./Sugestao";
 

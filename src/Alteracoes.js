@@ -8,7 +8,7 @@ export default function Alteracoes(props){
   function TrocaPerfil(){
 
     const novo= prompt("Qual o link da imagem?")
-    if (novo.lenght >0){
+    if (novo.length >0){
         setImagem(novo)
     }
 
@@ -19,7 +19,7 @@ export default function Alteracoes(props){
   function TrocaNome(){
 
     const novo= prompt("Qual é o seu nome?")
-    if (novo.lenght >0){
+    if (novo.length >0){
         setNome(novo)
     }
 
