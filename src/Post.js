@@ -1,10 +1,55 @@
 export default function Post(props){
+  const [Like, setLike] = useState("")
+  const [Classe, setClasse] = useState("")
+  const [NumeroLikes, setNumeroLikes] = useState(props.likeNumber)
+  let EstadoLike = !Like ? "heart-outline" : Like
+  let ClasseLike = !Classe? "" : Classe
+
+  function Curtida(){
+    if(EstadoLike === "heart-outline"){
+      setNumeroLikes(NumeroLikes+1)
+      setClasse("vermelho")
+      setLike("heart")
+    }
+    else{
+      setNumeroLikes(NumeroLikes -1)
+      setClasse("")
+      setLike("heart-outline")
+    }
+  }
+
+  function CurtidaImagem(){
+    if(EstadoLike==="heart-outline"){
+      setNumeroLikes(NumeroLikes+1)
+      setClasse("vermelho")
+      setLike("heart")
+    }
+  }
+
+  const [Icone, setIcone] = useState("")
+  const [ClasseIcone, setClasseIcone] = useState("")
+  let EstadoIcone= !Icone? "bookmark-outline" : Icone
+  let ClasseIcone2= !ClasseIcone? "bookmark-outline" : ClasseIcone
+
+  function Salvar(){
+    if(EstadoIcone=== "bookmark-outline"){
+      setIcone("bookmark")
+      setClasseIcone("preto")
+    }
+    else{
+      setIcone("bookmark-outline")
+      setClasseIcone("")
+    }
+  }
+
+
+
     return (
-        <div class="post">
+        <div class="post" data-test="post">
             <div class="topo">
               <div class="usuario">
-                <img src="assets/img/meowed.svg" alt="meowed"/>
-                meowed
+                <img src={props.imagem1} alt={props.alt1}/>
+                {props.nome}
               </div>
               <div class="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -12,25 +57,25 @@ export default function Post(props){
             </div>
 
             <div class="conteudo">
-              <img src="assets/img/gato-telefone.svg" alt="gato-telefone"/>
+              <img data-test= "post-image" onDoubleClick={CurtidaImagem} src={props.imagem2} alt={props.alt2}/>
             </div>
 
             <div class="fundo">
               <div class="acoes">
                 <div>
-                  <ion-icon name="heart-outline"></ion-icon>
+                  <ion-icon data-test="like-post" name={EstadoLike} class={ClasseLike} onClick= {Curtida}></ion-icon>
                   <ion-icon name="chatbubble-outline"></ion-icon>
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon data-test="save-post" name={EstadoIcone} class={ClasseIcone2} onClick = {Salvar}></ion-icon>
                 </div>
               </div>
 
               <div class="curtidas">
-                <img src="assets/img/respondeai.svg" alt="respondeai"/>
-                <div class="texto">
-                  Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                <img src={props.imglikes} alt={props.imglikes}/>
+                <div data-test="likes-number" class="texto">
+                  Curtido por <strong>{props.userlike}</strong> e <strong>outras {props.likeNumber} pessoas</strong>
                 </div>
               </div>
             </div>
