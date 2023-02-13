@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export default function Post(props){
   const [Like, setLike] = useState("")
   const [Classe, setClasse] = useState("")
