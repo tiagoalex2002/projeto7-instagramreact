@@ -3,18 +3,18 @@ import { useState } from "react"
 export default function Post(props){
   const [Like, setLike] = useState("")
   const [Classe, setClasse] = useState("")
-  const [NumeroLikes, setNumeroLikes] = useState(props.likeNumber)
+  const [numero, setNumero] = useState(props.likeNumber)
   let EstadoLike = !Like ? "heart-outline" : Like
   let ClasseLike = !Classe? "" : Classe
 
   function Curtida(){
     if(EstadoLike === "heart-outline"){
-      setNumeroLikes(NumeroLikes + 1)
+      setNumero(numero + 1)
       setClasse("vermelho")
       setLike("heart")
     }
     else{
-      setNumeroLikes(NumeroLikes - 1)
+      setNumero(numero - 1)
       setClasse("")
       setLike("heart-outline")
     }
@@ -22,7 +22,7 @@ export default function Post(props){
 
   function CurtidaImagem(){
     if(EstadoLike==="heart-outline"){
-      setNumeroLikes(NumeroLikes+1)
+      setNumero(numero + 1)
       setClasse("vermelho")
       setLike("heart")
     }
@@ -77,7 +77,7 @@ export default function Post(props){
               <div class="curtidas">
                 <img src={props.imglikes} alt={props.imglikes}/>
                 <div data-test="likes-number" class="texto">
-                  Curtido por <strong>{props.userlike}</strong> e <strong>outras {props.likeNumber} pessoas</strong>
+                  Curtido por <strong>{props.userlike}</strong> e <strong>outras {numero} pessoas</strong>
                 </div>
               </div>
             </div>
