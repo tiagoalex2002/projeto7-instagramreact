@@ -11,3 +11,4 @@ export default function TrocaNome(){
     let texto = !Nome ? "Anônimo" : Nome
 
 }
+
