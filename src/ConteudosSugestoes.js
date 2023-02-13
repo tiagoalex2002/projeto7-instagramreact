@@ -1,7 +1,7 @@
-const ConteudosSugestoes=[ {imagem:"assets/img/bad.vibes.memes.svg", nome:"bad.vibes.memes.svg", reason:"Segue você"},
-{imagem:"assets/img/chibirdart.svg", nome:"chibirdart", reason:"Segue você"},
-{imagem:"assets/img/razoesparaacreditar.svg", nome:"razoesparaacreditar", reason:"Novo no Instagram"},
-{imagem:"assets/img/adorable_animals.svg", nome:"adorable_animals", reason:"Segue você"},
-{imagem:"assets/img/smallcutecats.svg", nome:"smallcutecats", reason:"Segue você"}]
+const ConteudosSugestoes=[ {img:"assets/img/bad.vibes.memes.svg", nom:"bad.vibes.memes.svg", reason:"Segue você"},
+{img:"assets/img/chibirdart.svg", nom:"chibirdart", reason:"Segue você"},
+{img:"assets/img/razoesparaacreditar.svg", nom:"razoesparaacreditar", reason:"Novo no Instagram"},
+{img:"assets/img/adorable_animals.svg", nom:"adorable_animals", reason:"Segue você"},
+{img:"assets/img/smallcutecats.svg", nom:"smallcutecats", reason:"Segue você"}]
 
 export default ConteudosSugestoes
