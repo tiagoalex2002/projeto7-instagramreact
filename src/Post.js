@@ -9,12 +9,12 @@ export default function Post(props){
 
   function Curtida(){
     if(EstadoLike === "heart-outline"){
-      setNumeroLikes(NumeroLikes+1)
+      setNumeroLikes(NumeroLikes + 1)
       setClasse("vermelho")
       setLike("heart")
     }
     else{
-      setNumeroLikes(NumeroLikes -1)
+      setNumeroLikes(NumeroLikes - 1)
       setClasse("")
       setLike("heart-outline")
     }

@@ -9,8 +9,7 @@ export default function Sugestoes(){
             Sugestões para você
             <div>Ver tudo</div>
           </div>
-            {ConteudosSugestoes.map((item)=>  <Sugestao img={ConteudosSugestoes.img} nom={ConteudosSugestoes.nom} reason={ConteudosSugestoes.reason}/> )}
-          
+            {ConteudosSugestoes.map((item)=>  <Sugestao img={item.img} nom={item.nom} reason={item.reason}/> )}
           </div>   
     )
 }
